@@ -1,0 +1,119 @@
+<html>
+
+<head>
+  <title>Nueva Consulta de Contacto</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      min-width: 100%;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      background-color: #f4f7f9;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 0;
+      text-align: center;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #0070f3;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    .value {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-left: 4px solid #0070f3;
+      border-radius: 4px;
+    }
+
+    .email-wrapper {
+      max-width: 600px;
+      margin: 20px auto;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .email-header {
+      background-color: #0070f3;
+      padding: 30px;
+      color: #ffffff;
+    }
+
+    .email-body {
+      padding: 40px;
+      background-color: #ffffff;
+    }
+
+    .email-footer {
+      background-color: #f6f6f6;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .message-box {
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="email-wrapper">
+    <div class="email-header">
+      <h1>Nueva Solicitud de Cotización</h1>
+    </div>
+
+    <div class="email-body">
+      <p>Has recibido un nuevo mensaje a través del formulario de contacto de tu sitio web. Aquí tienes los detalles:
+      </p>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
+
+      <div class="label">Nombre del Cliente:</div>
+      <div class="value">
+        <%= name %>
+      </div>
+
+      <div class="label">Correo Electrónico:</div>
+      <div class="value"><a href="mailto:<%= email %>">
+          <%= email %>
+        </a></div>
+
+      <div class="label">Teléfono:</div>
+      <div class="value">
+        <%= phone %>
+      </div>
+
+      <div class="label">Tipo de Proyecto:</div>
+      <div class="value"><strong>
+          <%= projectType %>
+        </strong></div>
+
+      <div class="label">Mensaje / Dudas:</div>
+      <div class="value message-box">
+        <%= message %>
+      </div>
+    </div>
+
+    <div class="email-footer">
+      <p>Este correo fue generado automáticamente por el sistema de contacto.</p>
+    </div>
+  </div>
+</body>
+
+</html>
