@@ -22,8 +22,6 @@ export const sendEmail = async (
 ) => {
   const html = await renderEmailTemplate(templateName, data);
 
-  console.log(process.env.EMAIL_USER);
-  console.log(process.env.EMAIL_PASSWORD);
   await transporter.sendMail({
     from: `<${process.env.EMAIL_USER}>`,
     to,

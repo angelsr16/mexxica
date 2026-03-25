@@ -9,9 +9,7 @@ export async function sendEmailAction(
   data: any,
 ) {
   try {
-    console.log("TRYING")
     await sendEmail(to, subject, templateName, data);
-    console.log("SUCCESS");
     return { success: true };
   } catch (error) {
     console.log(error);
