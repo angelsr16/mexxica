@@ -2,8 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { sendEmailAction } from "@/actions/email";
+import { saveContactForm } from "@/actions/saveFormData";
 
-type FormData = {
+export type FormData = {
   name: string;
   email: string;
   phone: string;
@@ -112,7 +113,6 @@ export const Contacto = () => {
   };
 
   const handleEnviarCorreo = async () => {
-    // Mark all fields as touched
     const allTouched: Partial<Record<keyof FormData, boolean>> = {
       name: true,
       email: true,
@@ -136,6 +136,7 @@ export const Contacto = () => {
         "cotizacion-email",
         formData,
       );
+      await saveContactForm(formData);
       setStatus("success");
       setFormData({
         name: "",
