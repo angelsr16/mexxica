@@ -15,7 +15,6 @@ export const Navbar = () => {
     { label: "Inicio", href: "#inicio" },
     { label: "Quiénes Somos", href: "#quienes-somos" },
     { label: "Servicios", href: "#servicios" },
-    { label: "Proyectos", href: "#proyectos" },
     { label: "Contacto", href: "#contacto" },
   ];
 

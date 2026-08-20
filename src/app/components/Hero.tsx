@@ -50,7 +50,7 @@ export const Hero = () => {
         className="relative z-10 text-center px-6 max-w-5xl mx-auto"
       >
         <p className="opacity-0 animate-fade-up delay-100 font-body text-xs tracking-[0.4em] uppercase text-gold-500 mb-8">
-          Ingeniería Civil · Arquitectura · Topología
+          Ingeniería Civil · Arquitectura · Topografía
         </p>
         <div className="opacity-0 animate-fade-up delay-200 flex justify-center mb-12">
           <Image

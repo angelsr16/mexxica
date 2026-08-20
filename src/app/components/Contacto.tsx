@@ -131,7 +131,7 @@ export const Contacto = () => {
     setStatus("idle");
     try {
       await sendEmailAction(
-        "angelsanchezromero09@gmail.com",
+        "oscaralcdelf@gmail.com",
         "Nuevo Correo de Contacto",
         "cotizacion-email",
         formData,

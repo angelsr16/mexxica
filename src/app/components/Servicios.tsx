@@ -214,15 +214,13 @@ export const Servicios = () => {
       id="servicios"
       className="relative py-32 overflow-hidden bg-stone-950"
     >
-      <div className="absolute top-0 left-0 right-0 h-px aztec-border" />
+      <div className="absolute top-0 left-0 right-0 h-px aztec-border pointer-events-none" />
 
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(92,26,42,0.12),transparent)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(92,26,42,0.12),transparent)] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6">
+      {/* Added relative z-10 to bring content above background layers */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div ref={headerRef} className="opacity-0 text-center mb-20">
-          <p className="font-body text-xs tracking-[0.4em] uppercase text-gold-500 mb-4">
-            Lo Que Hacemos
-          </p>
           <h2 className="font-display text-5xl md:text-7xl font-light text-stone-100 mb-6">
             Nuestros{" "}
             <span className="italic text-gold-gradient">Servicios</span>
@@ -247,10 +245,10 @@ export const Servicios = () => {
           </p>
           <a
             href="#contacto"
-            className="cursor-pointer! px-8 py-4 border border-stone-700 text-stone-300 font-body font-medium text-sm tracking-widest uppercase hover:border-gold-600/60 hover:text-gold-400 transition-all duration-300"
+            className="inline-block cursor-pointer px-8 py-4 border border-stone-700 text-stone-300 font-body font-medium text-sm tracking-widest uppercase hover:border-gold-600/60 hover:text-gold-400 transition-all duration-300"
           >
             Solicitar Cotización
-            <span>↓</span>
+            <span className="ml-2">↓</span>
           </a>
         </div>
       </div>
